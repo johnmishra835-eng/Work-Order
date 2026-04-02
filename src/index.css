@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Brand Colors */
+  --color-primary: #002046;
+  --color-primary-container: #1b365d;
+  --color-on-primary-container: #87a0cd;
+  
+  --color-secondary: #515f74;
+  --color-secondary-container: #d5e3fc;
+  
+  --color-tertiary: #3b1500;
+  --color-tertiary-container: #5d2500;
+  --color-tertiary-fixed: #ffdbca;
+  --color-on-tertiary-fixed-variant: #783200;
+  
+  --color-safety-orange: #fe771b;
+  
+  /* Surface Tiers */
+  --color-surface: #f6fafe;
+  --color-surface-container-low: #f0f4f8;
+  --color-surface-container: #eaeef2;
+  --color-surface-container-high: #e4e9ed;
+  --color-surface-container-highest: #dfe3e7;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-on-surface: #171c1f;
+  --color-on-surface-variant: #44474e;
+  --color-outline-variant: #c4c6cf;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .industrial-gradient {
+    background: linear-gradient(135deg, #002046 0%, #1b365d 100%);
+  }
+  
+  .glass-nav {
+    @apply backdrop-blur-md bg-surface/80;
+  }
+  
+  .signature-line {
+    background-image: linear-gradient(to right, #c4c6cf 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 8px 1px;
+    background-repeat: repeat-x;
+  }
+}
